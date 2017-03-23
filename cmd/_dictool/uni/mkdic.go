@@ -1,4 +1,4 @@
-// Copyright 2015 ikawaha
+// Copyright 2015 kenmazsyma
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ikawaha/kagome/internal/dic"
+	"github.com/kenmazsyma/kagome/internal/dic"
 )
 
 const (

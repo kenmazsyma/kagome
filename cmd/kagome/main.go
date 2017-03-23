@@ -1,4 +1,4 @@
-// Copyright 2015 ikawaha
+// Copyright 2015 kenmazsyma
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -20,9 +20,9 @@ import (
 	"os"
 	"path"
 
-	"github.com/ikawaha/kagome/cmd/kagome/lattice"
-	"github.com/ikawaha/kagome/cmd/kagome/server"
-	"github.com/ikawaha/kagome/cmd/kagome/tokenize"
+	"github.com/kenmazsyma/kagome/cmd/kagome/lattice"
+	"github.com/kenmazsyma/kagome/cmd/kagome/server"
+	"github.com/kenmazsyma/kagome/cmd/kagome/tokenize"
 )
 
 var (
@@ -58,7 +58,7 @@ var (
 
 //Usage prints to stdout information about the tool
 func Usage() {
-	fmt.Fprintf(errorWriter, "Japanese Morphological Analyzer -- github.com/ikawaha/kagome\n")
+	fmt.Fprintf(errorWriter, "Japanese Morphological Analyzer -- github.com/kenmazsyma/kagome\n")
 	fmt.Fprintf(errorWriter, "usage: %s <command>\n", path.Base(os.Args[0]))
 }
 

@@ -1,4 +1,4 @@
-// Copyright 2015 ikawaha
+// Copyright 2015 kenmazsyma
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -33,7 +33,7 @@ import (
 	"golang.org/x/text/encoding/japanese"
 	"golang.org/x/text/transform"
 
-	"github.com/ikawaha/kagome/internal/dic"
+	"github.com/kenmazsyma/kagome/internal/dic"
 )
 
 const (

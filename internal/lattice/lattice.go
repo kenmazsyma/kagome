@@ -1,4 +1,4 @@
-// Copyright 2015 ikawaha
+// Copyright 2015 kenmazsyma
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,12 +16,11 @@ package lattice
 
 import (
 	"fmt"
+	"github.com/kenmazsyma/kagome/internal/dic"
 	"io"
 	"sync"
 	"unicode"
 	"unicode/utf8"
-
-	"github.com/ikawaha/kagome/internal/dic"
 )
 
 const (
@@ -123,7 +122,6 @@ func (la *Lattice) Build(inp string) {
 	for pos, ch := range inp {
 		runePos++
 		anyMatches := false
-
 		// (1) USER DIC
 		if la.udic != nil {
 			la.udic.Index.CommonPrefixSearchCallback(inp[pos:], func(id, l int) {
@@ -166,6 +164,9 @@ func (la *Lattice) Build(inp string) {
 			for i, w := pos, 0; i < endPos; i += w {
 				_, w = utf8.DecodeRuneInString(inp[i:])
 				end := i + w
+				if w == 0 {
+					break
+				}
 				dup, _ := la.dic.UnkIndexDup[int32(class)]
 				for x := 0; x < int(dup)+1; x++ {
 					la.addNode(runePos, int(id)+x, runePos, UNKNOWN, inp[pos:end])

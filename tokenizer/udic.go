@@ -1,4 +1,4 @@
-// Copyright 2016 ikawaha
+// Copyright 2016 kenmazsyma
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/ikawaha/kagome/internal/dic"
+	"github.com/kenmazsyma/kagome/internal/dic"
 )
 
 // UserDic represents a user dictionary.

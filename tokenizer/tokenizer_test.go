@@ -1,4 +1,4 @@
-// Copyright 2015 ikawaha
+// Copyright 2015 kenmazsyma
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/ikawaha/kagome/internal/lattice"
+	"github.com/kenmazsyma/kagome/internal/lattice"
 )
 
 const (

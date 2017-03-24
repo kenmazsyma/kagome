@@ -17,6 +17,7 @@ package dic
 import (
 	"bytes"
 	"github.com/kenmazsyma/kagome/internal/dic/data"
+	"log"
 	"sync"
 )
 
@@ -61,6 +62,7 @@ func loadInternalSysDic(path string) (d *Dic) {
 		buf []byte
 		err error
 	)
+	log.Printf("%s\n", path)
 	// morph.dic
 	if buf, err = data.Asset(path + "/morph.dic"); err != nil {
 		panic(err)

@@ -16,15 +16,23 @@ package tokenizer
 
 import (
 	"bytes"
+	"fmt"
+	"github.com/kenmazsyma/kagome/internal/lattice"
 	"reflect"
 	"testing"
-
-	"github.com/kenmazsyma/kagome/internal/lattice"
 )
 
 const (
 	testUserDicPath = "../_sample/userdic.txt"
 )
+
+func TestOre(t *testing.T) {
+	tnz := New()
+	tokens := tnz.Analyze("整数同士の割り算について紹介。ただし、Rubyの割り算について完全に網羅している記事ではないことを断っておきます。田中義剛とアキラ１００％", Normal)
+	for _, tok := range tokens {
+		fmt.Println(tok.Surface)
+	}
+}
 
 func TestAnalyze01(t *testing.T) {
 	tnz := New()
